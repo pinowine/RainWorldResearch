@@ -1,0 +1,22 @@
+{
+    "pearl" : {
+        "startingiterator" : "lttm",
+        "iterators" : {
+            "lttm-past" : "仰望皓月（崩塌前）",
+            "lttm" : "仰望皓月",
+            "lttm-future" : "仰望皓月（未来）",
+            "fp" : "五块卵石"
+        }
+    },
+
+    "broadcast" : {
+        "iterators" : {}
+    },
+
+    "object" : {
+        "startingiterator" : "lttm",
+        "iterators" : {
+            "lttm" : "仰望皓月"
+        }
+    }
+}

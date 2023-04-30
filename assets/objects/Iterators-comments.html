@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迭代器们的对话</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../main.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a class="logo" href="../../mainpage.html">Rain World<br>Script Research</a>
+            <ul class="in-nav">
+                <li class="nav-show">
+                    <a href="../../assetspage.html">资产</a>
+                </li>
+                <li class="nav-show">
+                    <a href="../../commentspage.html">评论</a>
+                </li>
+                <li class="nav-show">
+                    <a href="../../aboutpage.html">关于</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 顶栏结束 -->
+
+    <div class="maincontainer">
+
+        <div class="lefttitle">
+            <h4>Iterator's Comments</h4>
+            <h1>迭代器们的对话</h1>
+            <p>这里包含：当蛞蝓猫把各种物品拿给迭代器们看时祂们所说的话，和矛大师限定的广播内容。它们透露了游戏中的绝大多数剧情——以及99%的文本内容。</p>
+        </div>
+
+        <div class="choosebox-container">
+            <div class="choosebox">
+                <div class="item-kind-box">
+                    <form name="item-kind" class="item-kind-select" id="item-kind-selector"></form>
+                </div>
+                <div class="iterator-box">
+                    <form name="iterator" class="iterator-select" id="iterator-selector"></form>
+                </div>
+                <div class="pearl-box">
+                    <form name="pearl" class="pearl-select" id="pearl-selector"></form>
+                </div>
+                <div class="broadcast-box">
+                    <form name="broadcast" class="broadcast-select" id="broadcast-selector"></form>
+                </div>
+                <div class="object-box">
+                    <form name="object" class="object-select" id="object-selector"></form>
+                </div>
+            </div>
+            <div class="viewing-box">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 主体内容结束 -->
+
+    <footer class="bottom">
+        <p>
+            Code on <a href="https://github.com/">Github</a> | Designed by <a href="https://github.com/pinowine">pinowine</a> with <a href="https://www.figma.com/community">Figma</a> and <a href="https://code.visualstudio.com/">VSCode</a><br><a href="https://store.steampowered.com/app/312520/Rain_World/">Rain World</a> is property of <a href="https://videocultmedia.com/">Vediocult</a> | Special Thanks to <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki">Official Rain World Wiki</a> and <a href="https://rain-world-map.github.io/">Interactive Rain World Map</a>
+        </p>
+    </footer>
+
+    <!-- 底部致谢 -->
+
+    <script>
+
+        'use strict';
+
+        var pearl_color = {};
+
+        getJsonObject("pearl-color.json",function(json) { pearl_color = json; }, false);
+
+        var html = "";
+        for (const color in pearl_color) {
+            var icon = pearl_color[color]
+            html += `
+                <label class="selector-btn">
+                    <input type="radio" class="btn-ui" name="pearls" onclick="selectpearl('${pearlcolor}');" autocomplete="off">
+                    <img src="../../image/pearls/${icon}.png">
+                </label>`;
+            document.getElementById('pearl-selector').innerHTML = html;
+
+        }
+
+    </script>
+
+
+</body>
+</html>
